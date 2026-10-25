@@ -27,7 +27,7 @@
   --font-primary: 'Alumni Sans', sans-serif;
   --font-secondary: 'DM Sans', sans-serif;
   --font-size-content: clamp(1rem, 0.21vw + 0.94rem, 1.13rem);
-  --font-size-h1: clamp(8.88rem, 32.5vw + -0.88rem, 28.38rem);
+  --font-size-h1: clamp(8.75rem, 21.88vw + 2.19rem, 21.88rem);
   --font-size-h2: clamp(3.75rem, 2.08vw + 3.13rem, 5rem);
   --font-size-h3: clamp(1.88rem, 0.63vw + 1.69rem, 2.25rem);
   --font-size-h4: clamp(1.25rem, 0.42vw + 1.13rem, 1.5rem);
@@ -1398,8 +1398,8 @@ a:hover {
 }
 
 .icon--md {
-  height: 1.25em;
-  width: 1.25em;
+  height: 2em;
+  width: 2em;
 }
 
 .icon--lg {
@@ -1432,6 +1432,7 @@ a:hover {
   display: flex;
   gap: 20px;
   list-style-type: none;
+  align-items: center;
 }
 .header img:hover {
   filter: drop-shadow(0 0 12px #bb62ff) drop-shadow(0 0 60px #bb62ff);
@@ -1756,6 +1757,9 @@ a:hover {
   transform: translateZ(0);
 }
 
+.projects h4 span {
+  font-size: clamp(1.25rem, 0.52vw + 1.09rem, 1.56rem);
+}
 .projects span {
   font-weight: bold;
   filter: drop-shadow(0 0 12px #bb62ff) drop-shadow(0 0 60px #bb62ff);
@@ -1803,7 +1807,6 @@ a:hover {
        user-select: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  overscroll-behavior: contain;
   outline: none;
 }
 .projects .flex-carousel[data-hover] {
@@ -1843,7 +1846,10 @@ a:hover {
 .projects .card_content {
   position: absolute;
   inset: 0;
-  background: rgba(164, 84, 224, 0.5);
+  background: rgba(22, 6, 40, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1856,6 +1862,9 @@ a:hover {
 }
 .projects .card_content p {
   margin: 0;
+}
+.projects .card_content span {
+  filter: drop-shadow(0 0 6px rgba(187, 98, 255, 0.55));
 }
 .projects .card_content.is-open {
   opacity: 1;
@@ -1955,7 +1964,7 @@ a:hover {
 .card_content {
   position: absolute;
   inset: 0;
-  background: rgba(164, 84, 224, 0.5);
+  background: rgba(22, 6, 40, 0.82);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2237,13 +2246,21 @@ html:has(.video-modal[open]) {
   font-size: 0.85rem;
 }
 .footer .footer_ai summary {
+  color: var(--color-primary);
   font-size: var(--font-size-h4);
   cursor: pointer;
   width: -moz-fit-content;
   width: fit-content;
 }
+.footer .footer_ai summary .icon {
+  transform: translateY(-2px);
+}
 .footer .footer_ai summary:hover {
-  color: white;
+  color: var(--color-white);
+  filter: drop-shadow(0 0 12px #bb62ff) drop-shadow(0 0 60px #bb62ff);
+}
+.footer .footer_ai summary:hover .icon {
+  color: var(--color-white);
 }
 .footer .footer_ai p {
   margin: 12px 0 0;
