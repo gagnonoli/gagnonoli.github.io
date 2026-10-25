@@ -7,6 +7,11 @@
     <title>Portfolio: Olivier Gagnon</title>
     <link rel="icon" type="image/png" href="assets/images/logo.png" />
 
+    <!-- Polices : connexion anticipée + UNE seule requête (avant : 2 @import dans le CSS, qui bloquaient l'affichage) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" />
+
     <link rel="stylesheet" href="styles/main.css" />
 
     <script>
@@ -117,10 +122,9 @@
 
     <body>
 
-
         <!---------------------------------------- HUB ------------------------------------->
         <div data-component="GlowCursor" data-color="#A855F7" data-intensity="0.3" data-trail-width="3" data-linger="2.4" data-glow="1.5" data-click-burst="true" data-theme="dark"></div>
-        <audio id="music" loop src="assets/musique/djovan-nebular-dreams-435520.mp3"></audio>
+        <audio id="music" loop preload="none" src="assets/musique/djovan-nebular-dreams-435520.mp3"></audio>
         <div id="top"></div>
         <div data-component="AnchorLinks" data-offset="80"></div>
         <div id="smooth-wrapper" data-component="Scroller" data-skew="true" data-pin-items="true">
@@ -149,7 +153,7 @@
                     <div js-pinned class="canvas" style="height: 80vh" data-component="CrystalizedBall" data-preset="plasma" data-color="#A855F7" data-size="0.7" data-crackle="0.85" data-fill="0.5" data-hover-strength="0.7"></div>
                 </section>
 
-                                <!---------------------------------------- À PROPOS ------------------------------------->
+                <!---------------------------------------- À PROPOS ------------------------------------->
                 <section class="about" id="about" data-anchor-offset="0">
                     <div class="bg-laser" data-component="LaserFlow" data-color="#A855F7" data-beam-position="0.5" data-intensity="0.5" data-fog="0.2" data-dust="1.2" data-mouse-interaction="true"></div>
                     <div class="wrapper">
@@ -159,16 +163,26 @@
                                     <h2 js-pinned data-component="TextAnim" data-repeat>C'est qui lui?</h2>
 
                                     <p>
-                                        Salut! Je m’appelle <span>Olivier</span>, j’ai 23 ans et j’étudie en
-                                        <span>Techniques d’intégration multimédia</span> au Cégep Édouard-Montpetit.
-                                        Je me spécialise en <span>modélisation 3D</span>, en <span>design UI/UX</span>
-                                        et en <span>level design</span> pour les jeux vidéo. En dehors de mes projets,
-                                        je m’entraîne au gym, je joue aux jeux vidéo, je lis et je regarde des films et
-                                        des séries. Ces passions nourrissent directement mon travail : elles m’inspirent
-                                        en matière de <span>narration</span>, d’<span>ambiance</span> et de
-                                        <span>mise en scène</span>. Je suis présentement à la recherche d’un
-                                        <span>stage en création 3D ou en design</span> pour approfondir mes compétences
-                                        et me dépasser dans un domaine qui me passionne.
+                                        Salut! Je m’appelle
+                                        <span>Olivier</span>
+                                        , j’ai 23 ans et j’étudie en
+                                        <span>Techniques d’intégration multimédia</span>
+                                        au Cégep Édouard-Montpetit. Je me spécialise en
+                                        <span>modélisation 3D</span>
+                                        , en
+                                        <span>design UI/UX</span>
+                                        et en
+                                        <span>level design</span>
+                                        pour les jeux vidéo. En dehors de mes projets, je m’entraîne au gym, je joue aux jeux vidéo, je lis et je regarde des films et
+                                        des séries. Ces passions nourrissent directement mon travail : elles m’inspirent en matière de
+                                        <span>narration</span>
+                                        , d’
+                                        <span>ambiance</span>
+                                        et de
+                                        <span>mise en scène</span>
+                                        . Je suis présentement à la recherche d’un
+                                        <span>stage en création 3D ou en design</span>
+                                        pour approfondir mes compétences et me dépasser dans un domaine qui me passionne.
                                     </p>
                                 </div>
                             </div>
@@ -227,7 +241,7 @@
                             </button>
                         </div>
                         <div class="about_media tilted-card" data-component="TiltedCard" data-rotate-amplitude="12" data-scale-on-hover="1.08" data-caption="lui">
-                            <img src="assets/images/pdp.png" alt="Olivier Gagnon" />
+                            <img src="assets/images/pdp.webp" alt="Olivier Gagnon" width="515" height="541" decoding="async" />
                         </div>
                     </div>
                 </section>
