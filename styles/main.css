@@ -1837,7 +1837,7 @@ a:hover {
   height: calc(var(--card-h, 0.6) * 100%);
   aspect-ratio: var(--card-aspect, 1.3333);
   transform: translate(-50%, -50%) scale(var(--flex-carousel-lift, 1));
-  border-radius: var(--card-radius, 0);
+  border-radius: calc(var(--card-radius, 0px) / var(--flex-carousel-lift, 1));
   overflow: hidden;
   pointer-events: none;
 }
