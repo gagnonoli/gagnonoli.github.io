@@ -156,7 +156,7 @@
 
                 <!---------------------------------------- À PROPOS ------------------------------------->
                 <section class="about" id="about" data-anchor-offset="0">
-                    <div class="bg-laser" data-component="LaserFlow" data-color="#A855F7" data-beam-position="0.5" data-intensity="0.5" data-fog="0.2" data-dust="1.2" data-mouse-interaction="true"></div>
+                    <div class="bg-laser" data-component="LaserFlow" data-color="#A855F7" data-beam-position="0.5" data-intensity="0.5" data-desktop-boost="1.45" data-fog="0.2" data-dust="1.2" data-mouse-interaction="true"></div>
                     <div class="wrapper">
                         <div class="about_content">
                             <div data-component="BorderGlow" data-background-color="#0c0614" data-border-radius="16" data-glow-color="275 90 70" data-colors="#bb62ff,#9729d6,#38bdf8" data-animated>
@@ -188,55 +188,58 @@
                                 </div>
                             </div>
 
-                            <h3 js-pinned data-component="TextAnim" data-repeat>Compétences:</h3>
-                            <h4>Softskills</h4>
-                            <ul class="softskills">
-                                <li>
-                                    <p>Persévérant</p>
-                                </li>
-                                <li>
-                                    <p>Collaboratif</p>
-                                </li>
-                                <li>
-                                    <p>Créatif</p>
-                                </li>
-                                <li>
-                                    <p>Perfectionniste</p>
-                                </li>
-                            </ul>
-                            <h4>Logiciels</h4>
-                            <ul class="logiciel">
-                                <li>
-                                    <svg class="icon icon--lg">
-                                        <use href="#icon-blender"></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg class="icon icon--lg">
-                                        <use href="#icon-figma"></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg class="icon icon--lg">
-                                        <use href="#icon-ae"></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg class="icon icon--lg">
-                                        <use href="#icon-ps"></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg class="icon icon--lg">
-                                        <use href="#icon-pr"></use>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg class="icon icon--lg">
-                                        <use href="#icon-ue"></use>
-                                    </svg>
-                                </li>
-                            </ul>
+                            <div class="skills" data-component="SkillsPlay">
+                                <h3 js-pinned data-component="TextAnim" data-repeat>Compétences:</h3>
+                                <h4>Softskills</h4>
+                                <ul class="softskills">
+                                    <li>
+                                        <p>Persévérant</p>
+                                    </li>
+                                    <li>
+                                        <p>Collaboratif</p>
+                                    </li>
+                                    <li>
+                                        <p>Créatif</p>
+                                    </li>
+                                    <li>
+                                        <p>Perfectionniste</p>
+                                    </li>
+                                </ul>
+                                <h4>Logiciels</h4>
+                                <ul class="logiciel">
+                                    <li data-label="Blender">
+                                        <svg class="icon icon--lg" role="img" aria-label="Blender">
+                                            <use href="#icon-blender"></use>
+                                        </svg>
+                                    </li>
+                                    <li data-label="Figma">
+                                        <svg class="icon icon--lg" role="img" aria-label="Figma">
+                                            <use href="#icon-figma"></use>
+                                        </svg>
+                                    </li>
+                                    <li data-label="Unreal Engine">
+                                        <svg class="icon icon--lg" role="img" aria-label="Unreal Engine">
+                                            <use href="#icon-ue"></use>
+                                        </svg>
+                                    </li>
+                                    <li data-label="Photoshop">
+                                        <svg class="icon icon--lg" role="img" aria-label="Photoshop">
+                                            <use href="#icon-ps"></use>
+                                        </svg>
+                                    </li>
+                                    <li data-label="Premiere Pro">
+                                        <svg class="icon icon--lg" role="img" aria-label="Premiere Pro">
+                                            <use href="#icon-pr"></use>
+                                        </svg>
+                                    </li>
+                                    <li data-label="After Effects">
+                                        <svg class="icon icon--lg" role="img" aria-label="After Effects">
+                                            <use href="#icon-ae"></use>
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+
                             <button data-component="SpecularButton" data-line-color="#be7dfc" data-intensity="3" data-auto-animate class="video" data-video-open>
                                 <a href="#">VOIR MA VIDÉO</a>
                             </button>
@@ -446,7 +449,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=olivier.gagnon.cl@gmail.com&su=Travaillons%20ensemble&body=Bonjour%20Olivier%2C%0A%0A" target="_blank" rel="noopener noreferrer" aria-label="M’envoyer un courriel">
+                                        <!-- mailto = marche sur mobile ; MailLink.js le remplace par Gmail Web sur ordinateur -->
+                                        <a href="mailto:olivier.gagnon.cl@gmail.com?subject=Travaillons%20ensemble&body=Bonjour%20Olivier%2C%0A%0A" data-component="MailLink" data-gmail="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=olivier.gagnon.cl@gmail.com&amp;su=Travaillons%20ensemble&amp;body=Bonjour%20Olivier%2C%0A%0A" aria-label="M’envoyer un courriel">
                                             <svg class="icon icon--md">
                                                 <use href="#icon-gmail"></use>
                                             </svg>
@@ -481,6 +485,7 @@
 
                     </div>
                 </footer>
+
             </div>
         </div>
 
@@ -504,7 +509,7 @@
             </div>
 
             <video controls playsinline preload="metadata">
-                <source src="assets/video/video-presentation-desaturated.mp4" type="video/mp4" />
+                <source src="assets/video/video-presentation-relight.mp4" type="video/mp4" />
             </video>
         </dialog>
 

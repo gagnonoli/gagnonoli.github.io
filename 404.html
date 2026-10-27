@@ -122,7 +122,6 @@
 
     <body>
 
-
         <!---------------------------------------- HUB ------------------------------------->
         <div data-component="GlowCursor" data-color="#A855F7" data-intensity="0.3" data-trail-width="3" data-linger="2.4" data-glow="1.5" data-click-burst="true" data-theme="dark"></div>
         <audio id="music" loop preload="none" src="assets/musique/djovan-nebular-dreams-435520.mp3"></audio>
@@ -199,7 +198,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=olivier.gagnon.cl@gmail.com&su=Travaillons%20ensemble&body=Bonjour%20Olivier%2C%0A%0A" target="_blank" rel="noopener noreferrer" aria-label="M’envoyer un courriel">
+                                        <!-- mailto = marche sur mobile ; MailLink.js le remplace par Gmail Web sur ordinateur -->
+                                        <a href="mailto:olivier.gagnon.cl@gmail.com?subject=Travaillons%20ensemble&body=Bonjour%20Olivier%2C%0A%0A" data-component="MailLink" data-gmail="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=olivier.gagnon.cl@gmail.com&amp;su=Travaillons%20ensemble&amp;body=Bonjour%20Olivier%2C%0A%0A" aria-label="M’envoyer un courriel">
                                             <svg class="icon icon--md">
                                                 <use href="#icon-gmail"></use>
                                             </svg>
