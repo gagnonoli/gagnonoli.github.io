@@ -2,16 +2,6 @@
 <html lang="fr">
 
 <head>
-    <script defer src="https://t.contentsquare.net/uxa/91db383d8dc09.js"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0DKLXNE2JH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0DKLXNE2JH');
-</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio: Olivier Gagnon</title>
@@ -52,7 +42,7 @@
     </style>
 </head>
 
-<body>
+<body data-component="Scrolly">
     <!-- Écran de chargement -->
     <div class="preloader" data-component="Preloader" role="status" aria-live="polite">
         <div class="preloader__glow" aria-hidden="true"></div>
@@ -112,7 +102,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="assets/CV-Olivier-Gagnon.pdf" download>
+                        <a href="assets/images/cv.pdf" download>
                             CV
                             <svg class="icon" aria-hidden="true">
                                 <use href="#icon-download"></use>
@@ -145,7 +135,7 @@
                         <h1 class="title" data-component="DepthText" data-gradient-from="#BB62FF" data-gradient-to="#3D1759" data-gradient-angle="180" data-gradient-start="0" data-gradient-end="100" data-depth-color="#000000" data-layers="34" data-depth="2.4" data-tilt="7.5" data-pointer-tracking="false" data-smoothing="0.14" data-perspective="900" data-auto-orbit data-orbit-speed="0.35">
                             PORTFOLIO
                         </h1>
-                        <div class="hero_card">
+                        <div class="hero_card" data-scrolly="fromBottom">
                             <div class="hero_content">
                                 <h2 js-pinned data-component="TextAnim" data-repeat>Olivier Gagnon</h2>
                                 <h3 data-component="TrueFocus" data-blur-amount="4" data-pause="3">
@@ -168,7 +158,7 @@
                 <section class="about" id="about" data-anchor-offset="0">
                     <div class="bg-laser" data-component="LaserFlow" data-color="#A855F7" data-beam-position="0.5" data-intensity="0.5" data-desktop-boost="1.45" data-fog="0.2" data-dust="1.2" data-mouse-interaction="true"></div>
                     <div class="wrapper">
-                        <div class="about_content">
+                        <div class="about_content" data-scrolly="fromLeft">
                             <div data-component="BorderGlow" data-background-color="#0c0614" data-border-radius="16" data-glow-color="275 90 70" data-colors="#bb62ff,#9729d6,#38bdf8" data-animated>
                                 <div style="padding: 2rem">
                                     <h2 js-pinned data-component="TextAnim" data-repeat>C'est qui lui?</h2>
@@ -254,7 +244,7 @@
                                 <a href="#">VOIR MA VIDÉO</a>
                             </button>
                         </div>
-                        <div class="about_media tilted-card" data-component="TiltedCard" data-rotate-amplitude="12" data-scale-on-hover="1.08" data-caption="lui">
+                        <div class="about_media tilted-card" data-component="TiltedCard" data-rotate-amplitude="12" data-scale-on-hover="1.08" data-caption="lui" data-scrolly="fromRight">
                             <img src="assets/images/pdp.webp" alt="Olivier Gagnon" width="515" height="541" decoding="async" />
                         </div>
                     </div>
@@ -356,7 +346,7 @@
                                     <img src="assets/images/subzero.webp" alt="" />
                                     <div class="card_content">
                                         <h4>
-                                            <span>Design interface de jeu vidéo UI/UX</span>
+                                            <span>Design UI/UX jeu vidéo:</span>
                                             <br />
                                             Sous Zero
                                         </h4>
@@ -384,7 +374,7 @@
                                     <img src="assets/images/vivo.webp" alt="" />
                                     <div class="card_content">
                                         <h4>
-                                            <span>Design interface de site web UI/UX</span>
+                                            <span>Design UI/UX site web:</span>
                                             <br />
                                             Vivo Vision
                                         </h4>
@@ -468,7 +458,7 @@
                                     </li>
                                 </ul>
                                 <!-- Remplace par le chemin de ton CV -->
-                                <a class="footer_cv" href="assets/cv-olivier-gagnon.pdf" download>Télécharger mon CV ↓</a>
+                                <a class="footer_cv" href="assets/images/cv.pdf" download>Télécharger mon CV ↓</a>
                             </div>
                         </div>
 
@@ -518,9 +508,8 @@
                 </svg>
             </div>
 
-            <video controls playsinline preload="metadata">
-                <source src="assets/video/video-presentation-finale.mp4" type="video/mp4" />
-            </video>
+            <!-- Lecteur YouTube : créé à l'ouverture de la modale (voir Video.js), détruit à la fermeture -->
+            <div class="video-modal__frame" data-video-id="0r4n7RZz2W4"></div>
         </dialog>
 
         <a href="#top" class="back-to-top" aria-label="Remonter en haut de la page" data-component="GlassSurface" data-tint="#a855f7" data-background-opacity="0.16" data-distortion-scale="-180" data-displace="0.5" data-saturation="1.3">
