@@ -1597,11 +1597,13 @@ a:hover {
 .hero .hero_card {
   z-index: 2;
   position: absolute;
-  bottom: 10%;
-  translate: -13% -15%;
+  bottom: 5%;
+  left: 50%;
+  width: min(1024px, 100% - var(--spacing-md));
+  translate: -50% 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 700px;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
 }
 @media (width <= 830px) {
   .hero .hero_card {
@@ -1615,6 +1617,7 @@ a:hover {
 }
 .hero .hero_media {
   align-self: flex-end;
+  justify-self: end;
 }
 @media (width <= 830px) {
   .hero .hero_media {
@@ -1655,6 +1658,11 @@ a:hover {
     align-items: center;
   }
 }
+@media (width > 830px) {
+  .hero .canvas {
+    scale: 0.92;
+  }
+}
 .hero .title {
   z-index: 1;
   position: absolute;
@@ -1677,7 +1685,10 @@ a:hover {
 
 @media (width <= 830px) {
   .hero {
-    --ball: min(124vw, 600px);
+    --ball: min(
+        124vw,
+        600px
+    );
     --text-h: 220px;
     --gap: 30px;
     --group: calc(var(--ball) * 0.7 + var(--gap) + var(--text-h));
